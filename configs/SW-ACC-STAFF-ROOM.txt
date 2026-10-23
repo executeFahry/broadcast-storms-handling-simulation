@@ -1,0 +1,27 @@
+hostname SW-ACC-STAFF-ROOM
+!
+vlan 30
+ name Staff
+vlan 99
+ name NativeRemote
+!
+spanning-tree mode pvst
+!
+interface range GigabitEthernet0/1 - 2
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 30,99
+ no shutdown
+!
+interface range FastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no shutdown
+!
+interface Vlan99
+ ip address 192.168.99.13 255.255.255.0
+ no shutdown
+!
+end
