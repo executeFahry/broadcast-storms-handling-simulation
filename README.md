@@ -1,4 +1,4 @@
-# Broadcast Storm and MAC Address Flapping Simulation
+# Broadcast Storms Handling Simulation
 
 A Cisco Packet Tracer school network that demonstrates how redundant Layer 2 uplinks can cause broadcast storms and MAC address flapping when Spanning Tree Protocol (STP) is disabled, and how PVST+, root bridge selection, PortFast, and BPDU Guard help prevent those issues.
 
